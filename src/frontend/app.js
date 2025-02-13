@@ -1,4 +1,4 @@
-const apiEndpoint = "http://194.182.164.61:8080/api/tasks";
+const apiEndpoint = "https://app-210-300721-haesler-oscar.mangodesert-bd5a715a.northeurope.azurecontainerapps.io/api/tasks";
 
 $(document).ready(function () {
   // Charger les tâches au démarrage
