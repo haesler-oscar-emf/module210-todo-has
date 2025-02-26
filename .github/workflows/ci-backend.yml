@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'backend/**'  # Déclenche uniquement si des fichiers dans backend/ changent
+      - 'src/backend/**'  # Déclenche uniquement si des fichiers dans backend/ changent
 env:
   REG_NAME: "exo.container-registry.com"  # Nom du registry
   IMAGE_NAME: "backend-app"  # Nom de votre image
