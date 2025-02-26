@@ -5,12 +5,11 @@ on:
     branches:
       - main
   paths:
-      - 'src/frontend/**'
+    - "src/frontend/**"
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
-  
 
 jobs:
   build_and_deploy_job:
@@ -22,7 +21,7 @@ jobs:
         with:
           submodules: true
           lfs: false
-# Vérification de la présence du fichier index.html
+      # Vérification de la présence du fichier index.html
       - name: Vérifier la présence de index.html
         run: |
           if [ -f "./src/frontend/index.html" ]; then
@@ -64,4 +63,3 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AGREEABLE_FLOWER_035E2A203 }}
           action: "close"
-
