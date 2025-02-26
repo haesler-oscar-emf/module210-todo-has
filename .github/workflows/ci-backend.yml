@@ -1,16 +1,15 @@
-name: Build and save my Docker image to a registry
- 
+name: CI Backend
+
 on:
   push:
     branches:
-      - main  # Déclenchement lorsque le code est poussé sur main
- 
+      - main
     paths:
-      - 'src/frontend/**'  # Déclenche uniquement si des fichiers dans backend/ changent
+      - 'backend/**'  # Déclenche uniquement si des fichiers dans backend/ changent
 env:
   REG_NAME: "exo.container-registry.com"  # Nom du registry
   IMAGE_NAME: "backend-app"  # Nom de votre image
- 
+  
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -35,3 +34,4 @@ jobs:
       - name: Logout from registry
         run: |
           docker logout ${{ env.REG_NAME }}
+          
