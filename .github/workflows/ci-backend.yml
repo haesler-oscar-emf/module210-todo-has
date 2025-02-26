@@ -8,7 +8,7 @@ on:
       - 'src/backend/**'  # Déclenche uniquement si des fichiers dans backend/ changent
 env:
   REG_NAME: "exo.container-registry.com"  # Nom du registry
-  IMAGE_NAME: "backend-app"  # Nom de votre image
+  IMAGE_NAME: "backend-app-haesler"  # Nom de votre image
   
 jobs:
   build-and-deploy:
